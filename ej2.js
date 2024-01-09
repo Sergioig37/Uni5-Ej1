@@ -64,6 +64,6 @@ const checkPages = ({numeroPaginas}) => numeroPaginas>150 ;
 const chechLibro = (biblioteca, libro) => biblioteca.includes(libro);
 
 
-console.log(checkPages(libro1));
+console.log(checkPages(libro2));
 
 console.log(chechLibro(libreria, libro4));
