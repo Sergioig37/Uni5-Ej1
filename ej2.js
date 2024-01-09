@@ -47,7 +47,7 @@ const libro4 = {
     forrado: true,
     urlCover: "https://www.google.com",
     comprar: function(){
-        console.log("Libro de aventuras del autor "  + libro4.autor +" comprado")
+        console.log("Libro de aventuras de la autora "  + libro4.autor +" comprado")
     }
 }
 
