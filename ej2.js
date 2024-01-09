@@ -7,9 +7,8 @@ const libro1 = {
     forrado: true,
     urlCover: "https://www.google.com",
     comprar: function(){
-        console.log("Libro de aventuras del autor " +libro1.autor  +" comprado")
+        console.log(`Libro de aventuras del autor ${libro1.autor}  comprado`)
     }
-
 }
 
 const libro2 = {
@@ -21,9 +20,10 @@ const libro2 = {
     forrado: true,
     urlCover: "https://www.google.com",
     comprar: function(){
-        console.log("Libro de aventuras del autor " + libro2.autor +" comprado")
+        console.log(`Libro de aventuras del autor ${libro2.autor}  comprado`)
     }
 }
+
 
 const libro3 = {
     nombre: "El curión",
@@ -34,7 +34,7 @@ const libro3 = {
     forrado: false,
     urlCover: "https://www.google.com",
     comprar: function(){
-        console.log("Libro de aventuras del autor " + libro3.autor  +" comprado")
+        console.log(`Libro de aventuras del autor${libro3.autor}  comprado`)
     }
 }
 
@@ -47,7 +47,7 @@ const libro4 = {
     forrado: true,
     urlCover: "https://www.google.com",
     comprar: function(){
-        console.log("Libro de aventuras de la autora "  + libro4.autor +" comprado")
+        console.log(`Libro de aventuras de la autora ${libro4.autor}  comprado`)
     }
 }
 
@@ -55,3 +55,15 @@ console.log(libro1.comprar());
 console.log(libro2.comprar());
 console.log(libro3.comprar());
 console.log(libro4.comprar());
+
+
+const libreria = [libro1, libro2, libro3];
+
+const checkPages = ({numeroPaginas}) => numeroPaginas>150 ;   
+
+const chechLibro = (biblioteca, libro) => biblioteca.includes(libro);
+
+
+console.log(checkPages(libro1));
+
+console.log(chechLibro(libreria, libro4));
