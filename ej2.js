@@ -6,7 +6,9 @@ const libro1 = {
     editorial: "Barco De Vapor",
     forrado: false,
     urlCover: "https://www.google.com",
+     //otra manera de hacer una función
     comprar: function(){
+        //para añadir el valor de una variable de forma más limpia
         console.log(`Libro de aventuras del autor ${libro1.autor}  comprado`)
     }
 }
@@ -56,15 +58,15 @@ console.log(libro2.comprar());
 console.log(libro3.comprar());
 console.log(libro4.comprar());
 
-
+//otra manera de hacer un array
 const libreria = [libro1, libro2, libro3];
-
+//
 const checkPages = ({numeroPaginas}) => numeroPaginas>150 ;   
 
 const chechLibro = (biblioteca, libro) => biblioteca.includes(libro);
 
 
-const checkAutor = (autor, libreria) => libreria.find(nombre => nombre.autor === autor);
+const checkAutor = (autor, libreria) => libreria.find(libro => libro.autor === autor);
 
 const forraLibro = (libreria) => libreria.map (function(libro){
     libro.forrado = true;
