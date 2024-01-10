@@ -4,7 +4,7 @@ const libro1 = {
     autor: "Pepito",
     numeroPaginas: 200,
     editorial: "Barco De Vapor",
-    forrado: true,
+    forrado: false,
     urlCover: "https://www.google.com",
     comprar: function(){
         console.log(`Libro de aventuras del autor ${libro1.autor}  comprado`)
@@ -17,7 +17,7 @@ const libro2 = {
     autor: "Pepo",
     numeroPaginas: 100,
     editorial: "Barco De Vapor",
-    forrado: true,
+    forrado: false,
     urlCover: "https://www.google.com",
     comprar: function(){
         console.log(`Libro de aventuras del autor ${libro2.autor}  comprado`)
@@ -64,6 +64,37 @@ const checkPages = ({numeroPaginas}) => numeroPaginas>150 ;
 const chechLibro = (biblioteca, libro) => biblioteca.includes(libro);
 
 
-console.log(checkPages(libro2));
+const checkAutor = (autor, libreria) => libreria.find(nombre => nombre.autor === autor);
 
-console.log(chechLibro(libreria, libro4));
+const forraLibro = (libreria) => libreria.map (function(libro){
+    libro.forrado = true;
+})
+
+const prestarLibro = (libreria, titulo) => libreria.splice(libreria.findIndex(element => element.nombre === titulo), 1);
+
+const  devolverLibro = (libreria, libro) => libreria.push(libro);
+
+console.log(prestarLibro(libreria, "El curión"));
+console.log(libreria);
+devolverLibro(libreria, libro4);
+console.log(libreria);
+
+// console.log(checkPages(libro2));
+
+// console.log(chechLibro(libreria, libro4));
+
+
+// console.log(libro4, ...libreria);
+
+
+
+// const libreria150 = libreria.filter(checkPages);
+
+// console.log(libreria150)
+
+// const libroEncontrado = checkAutor("Pepo", libreria);
+
+// console.log(libroEncontrado);
+
+// forraLibro(libreria);
+// console.log(libreria);
